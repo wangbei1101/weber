@@ -14,13 +14,3 @@ bin
 rebel.xml
 hb-*
 fj-*
-renrendai-home/node_modules/*
-renrendai-home/fontEnd_*/*
-renrendai.ipr
-renrendai.iws
-/renrendai-mobile/src/main/webapp/node_modules/
-/renrendai-mobile/src/main/webapp/components/
-/renrendai-mobile/mobile-expose/src/main/webapp/node_modules/
-/renrendai-mobile/mobile-expose/src/main/webapp/components/
-
-node_modules

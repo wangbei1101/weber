@@ -2,46 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.renrendai</groupId>
-	<artifactId>renrendai</artifactId>
+	<groupId>org.weber</groupId>
+	<artifactId>weber</artifactId>
 	<packaging>pom</packaging>
-	<version>3.0-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 
-	<name>renrendai</name>
+	<name>weber</name>
 	<url>http://maven.apache.org</url>
 
 	<modules>
-		<module>dist-redis</module>
-		<module>renrendai-util</module>
-		<module>renrendai-core</module>
-		<module>renrendai-partner</module>
-		<module>renrendai-home</module>
-		<module>renrendai-mgmt</module>
-		<module>renrendai-api</module>
-		<module>renrendai-partner-stat</module>
-		<module>renrendai-rptbill</module>
-		<module>renrendai-schedule</module>
-		<module>renrendai-cms</module>
-		<!-- module>renrendai-sso</module --> <!-- still working, but do not add in build modules -->
-		<!--<module>renrendai-mobile</module>-->
-		<module>renrendai-mobile/mobile-expose</module>
-		<module>renrendai-mobile/mobile-service</module>
-		<module>renrendai-mobile/mobile-pay</module>
-		<!--<module>renrendai-mobile1.x</module>-->
-		<module>renrendai-api-security</module>
-		<module>renrendai-api-model</module>
-		<module>renrendai-cmbc</module>
-		<module>cmbc-sdk</module>
-		<module>renrendai-order</module>
-		<module>renrendai-api-cmbc</module>
-		<module>renrendai-account-corp</module>
   </modules>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.3</version>
 				<configuration>
 					<encoding>utf-8</encoding>
 					<source>1.7</source>
@@ -65,13 +41,8 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
+			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
 		</dependency>
 	</dependencies>
 
