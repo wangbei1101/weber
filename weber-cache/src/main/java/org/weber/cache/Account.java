@@ -10,9 +10,14 @@ import java.io.Serializable;
  */
 public class Account implements Serializable {
 
+
+    private static final long serialVersionUID = 3876832359143250755L;
+
     private int id;
 
     private String name;
+
+    private String no;
 
     public Account(String name){
         this.name = name;
@@ -32,5 +37,13 @@ public class Account implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
     }
 }

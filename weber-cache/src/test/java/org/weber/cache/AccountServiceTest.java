@@ -30,10 +30,15 @@ public class AccountServiceTest {
     public void testGetAccountByName() {
         // 第一次查询，应该走数据库
         System.out.println("first query...");
-        accountService.getAccountByName("somebody");
+        Account account = accountService.getAccountByName("somebody");
+
+        System.out.println("first query...no=" + account.getNo());
+        account.setNo("123");
+        accountService.update(account);
         // 第二次查询，应该不查数据库，直接返回缓存的值
         System.out.println("second query...");
         accountService.getAccountByName("somebody");
+        System.out.println("second query...no=" + account.getNo());
         System.out.println();
 
         Assert.assertTrue(true);
