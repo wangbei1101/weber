@@ -11,7 +11,8 @@
 	<url>http://maven.apache.org</url>
 
 	<modules>
-  </modules>
+		<module>weber-core</module>
+	</modules>
 	<build>
 		<plugins>
 			<plugin>
@@ -28,20 +29,21 @@
 	</build>
 
 	<properties>
+		<junit.version>4.12</junit.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.test.skip>true</maven.test.skip>
 		<springframework.version>3.1.1.RELEASE</springframework.version>
         <org.springframework.version>3.2.11.RELEASE</org.springframework.version>
         <org.springframework.security.version>3.2.3.RELEASE</org.springframework.security.version>
         <hibernate.version>3.5.2-Final</hibernate.version>
-		<struts2.version>2.3.16.3</struts2.version>
+
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
