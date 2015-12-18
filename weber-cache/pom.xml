@@ -71,6 +71,11 @@
             <artifactId>spring-expression</artifactId>
             <version>${springframework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.3.5.RELEASE</version>
+        </dependency>
         <!-- spring end -->
         <!-- database -->
         <!-- database end -->
@@ -81,5 +86,12 @@
             <version>${cglib.version}</version>
         </dependency>
         <!-- proxy end -->
+        <!-- redis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <!-- redis end -->
     </dependencies>
 </project>

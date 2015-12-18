@@ -1,12 +1,14 @@
 package org.weber.cache;
 
+import java.io.Serializable;
+
 /**
  * User: wangbei
  * Date: 2015/12/18
  * Time: 15:39
  * Desc:
  */
-public class Account {
+public class Account implements Serializable {
 
     private int id;
 
