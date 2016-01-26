@@ -16,9 +16,25 @@
     <cache:annotation-driven cache-manager="cacheManager" />
 
     <!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value -->
-    <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager"
+<!--    <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager"
           c:template-ref="redisTemplate"
-          p:cacheNames="accountCache"/>
+          p:cacheNames="accountCache"/>-->
+
+    <!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value -->
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="org.weber.cache.RedisCache">
+                    <property name="redisTemplate" ref="redisTemplate" />
+                    <property name="name" value="default"/>
+                </bean>
+                <bean class="org.weber.cache.RedisCache">
+                    <property name="redisTemplate" ref="redisTemplateSecond" />
+                    <property name="name" value="accountCache"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
 
     <!-- redis 相关配置 -->
     <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
@@ -40,9 +56,10 @@
     <!-- redis template definition -->
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connectionFactory-ref="connectionFactory"
+
          >
-        <!-- p:keySerializer="stringRedisSerializer"
-          p:hashKeySerializer-ref="stringRedisSerializer"-->
+        <!--  p:keySerializer="stringRedisSerializer"
+        p:hashKeySerializer-ref="stringRedisSerializer"-->
     </bean>
 
     <bean id="connectionFactorySecond"

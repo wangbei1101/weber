@@ -37,9 +37,8 @@ public class AccountServiceTest {
         accountService.update(account);
         // 第二次查询，应该不查数据库，直接返回缓存的值
         System.out.println("second query...");
-        accountService.getAccountByName("somebody");
+        account = accountService.getAccountByName("somebody");
         System.out.println("second query...no=" + account.getNo());
-        System.out.println();
 
         Assert.assertTrue(true);
     }
